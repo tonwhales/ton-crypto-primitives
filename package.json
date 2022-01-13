@@ -7,6 +7,9 @@
   "main": "./dist/node.js",
   "browser": "./dist/browser.js",
   "react-native": "./dist/native.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -fr dist && tsc --declaration",
     "release": "yarn build && yarn publish"
