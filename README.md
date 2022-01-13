@@ -1,8 +1,8 @@
-# TON crypto
+# TON crypto primitives
 
-[![Version npm](https://img.shields.io/npm/v/ton-crypto.svg?logo=npm)](https://www.npmjs.com/package/ton-crypto)
+[![Version npm](https://img.shields.io/npm/v/ton-crypto-primitives.svg?logo=npm)](https://www.npmjs.com/package/ton-crypto-primitives)
 
-Cross-platform crypto primitives for building apps for TON blockchain. Uses native crypto available in NodeJS or in browser.
+Cross-platform crypto primitives for building apps for TON blockchain. For internal imlementation of `ton-crypto`.
 
 ## Features
 
@@ -14,7 +14,7 @@ Cross-platform crypto primitives for building apps for TON blockchain. Uses nati
 ## Install
 
 ```bash
-yarn add ton-crypto buffer
+yarn add ton-crypto-primitives buffer
 ```
 
 #### Browser polifil
@@ -33,17 +33,6 @@ expo install expo-standard-web-crypto
 ```js
 import { polyfillWebCrypto } from 'expo-standard-web-crypto';
 polyfillWebCrypto();
-```
-
-## Hashing
-All methods accept strings or Buffers as arguments.
-
-```js
-import { sha256, sha512, pbkdf2_sha512, hmac_sha512 } from 'ton-crypto';
-const hash1 = await sha256('hello-world');
-const hash2 = await sha512(Buffer.from('hello-world', 'utf-8'));
-const key = await pbkdf2_sha512('password', 'salt', 10000, 64);
-const hmac = await hmac_sha512('hmac-key', 'data');
 ```
 
 # License
