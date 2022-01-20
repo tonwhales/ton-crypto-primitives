@@ -1,11 +1,17 @@
-import crypto from 'crypto';
+const getRandomBytes = require('expo-random').getRandomBytes;
 
 export function getSecureRandomBytes(size: number): Buffer {
-    return crypto.randomBytes(size);
+    return Buffer.from(getRandomBytes(size));
 }
 
 export function getSecureRandomWords(size: number): Uint16Array {
-    let res = new Uint16Array(size);
-    crypto.randomFillSync(res);
-    return res;
+    const bytes = getSecureRandomBytes(size * 2);
+
+    // Create a new TypedArray that is of the same type as the given TypedArray but is backed with the
+    // array buffer containing random bytes. This is cheap and copies no data.
+    return new Uint16Array(
+        bytes.buffer,
+        bytes.byteOffset,
+        size
+    );
 }

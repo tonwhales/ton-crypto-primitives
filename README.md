@@ -25,15 +25,10 @@ require("buffer");
 ```
 
 ## React Native
-To make it work on react native some native modules are required:
+To make it work on react native `expo-random` module is required:
 `
-expo install expo-standard-web-crypto
+yarn install expo-random
 `
-
-```js
-import { polyfillWebCrypto } from 'expo-standard-web-crypto';
-polyfillWebCrypto();
-```
 
 # License
 
