@@ -25,9 +25,9 @@ require("buffer");
 ```
 
 ## React Native
-To make it work on react native `expo-random` module is required:
+To make it work on react native `expo-crypto` module is required:
 `
-yarn install expo-random
+yarn install expo-crypto
 `
 
 # License

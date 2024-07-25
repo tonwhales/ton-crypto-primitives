@@ -1,4 +1,4 @@
-const getRandomBytes = require('expo-random').getRandomBytes;
+const getRandomBytes = require('expo-crypto').getRandomBytes;
 
 export function getSecureRandomBytes(size: number): Buffer {
     return Buffer.from(getRandomBytes(size));
